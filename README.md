@@ -28,7 +28,7 @@ A web application that allows you to easily download course materials from your 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/lms-bot.git
+git clone https://github.com/adine01/Moodle-meterial-downloader.git
 cd lms-bot
 ```
 
