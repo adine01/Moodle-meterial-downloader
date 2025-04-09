@@ -1,0 +1,407 @@
+/* Enhanced App.css for Moodle Downloader */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --success-color: #4cc9f0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+h3 {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Form Styles */
+form {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.25);
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(67, 97, 238, 0.3);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #3db8dc;
+  box-shadow: 0 4px 8px rgba(76, 201, 240, 0.3);
+}
+
+/* Message Styles */
+.message {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: var(--light-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+/* Semester Styles */
+.department-group {
+  margin-bottom: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.department-group:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.department-group h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.semester-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.semester-item {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid #e5e5e5;
+}
+
+.semester-item:hover {
+  background-color: #e9ecef;
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow);
+  border-color: var(--primary-color);
+}
+
+/* Module Styles */
+.module-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.module-item {
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+}
+
+.module-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.module-item h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.module-item p {
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+/* Loading Animation Styles */
+.download-progress {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  max-width: 550px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.loading-container {
+  margin: 35px auto;
+  text-align: center;
+}
+
+.loading-text {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+  font-weight: 500;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(67, 97, 238, 0.2);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Download Complete Screen */
+.download-complete {
+  text-align: center;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  max-width: 550px;
+  margin: 40px auto;
+}
+
+.download-complete h2 {
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .semester-list, .module-list {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+/* Additional CSS for new features */
+
+/* Login Form Enhancement */
+.login-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+  width: 100%;
+  height: 15px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  margin: 25px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Success and Error States */
+.success-icon, .error-icon {
+  font-size: 60px;
+  margin: 20px 0;
+}
+
+.success-icon {
+  color: #28a745;
+}
+
+.error-icon {
+  color: #dc3545;
+}
+
+.download-error {
+  text-align: center;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  max-width: 550px;
+  margin: 40px auto;
+}
+
+.download-error h2 {
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+/* Modules Container */
+.modules-container h2, .semesters-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Disabled state for buttons */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Hover effect for items */
+.module-item, .semester-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.module-item::before, .semester-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.module-item:hover::before, .semester-item:hover::before {
+  transform: scaleX(1);
+}
